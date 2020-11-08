@@ -6,7 +6,7 @@ Use [DomainConnectDDNS-Python](https://github.com/Domain-Connect/DomainConnectDD
     docker build --pull --rm -f "Dockerfile" -t domain-connect-ddns:latest "."
 
 ### Run container
-    docker run --name domain-connect-ddns -d ionosdns:latest
+    docker run --name domain-connect-ddns -d domain-connect-ddns:latest
 
 ### Setup domains 
     docker exec -it domain-connect-ddns domain-connect-dyndns setup --domain <YOUR_DOMAIN>
