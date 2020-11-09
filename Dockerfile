@@ -8,5 +8,6 @@ RUN apk add -U --no-cache gcc build-base linux-headers ca-certificates python3 p
 RUN pip install domain-connect-dyndns
 
 COPY update.sh /etc/periodic/15min/update
+RUN chmod +x /etc/periodic/15min/update
 
 CMD [ "crond", "-l", "2", "-f" ]
